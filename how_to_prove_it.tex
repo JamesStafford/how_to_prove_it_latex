@@ -214,30 +214,62 @@
         Write out (using logical symbols) what it means for an object x to be an element of this set: $(A \setminus B) \setminus C$
 
         \begin{align*}
+            x \in (A \setminus B) \setminus C
+            &\Leftrightarrow (x \in A \wedge x \notin B) \setminus C
+            && \text{(by definition of $\setminus$)} \\
+            &\Leftrightarrow (x \in A \wedge x \notin B) \wedge x \notin C
+            && \text{(by definition of $\setminus$)} \\
         \end{align*}
 
     \subsection*{Solution to 9(b)}
         Write out (using logical symbols) what it means for an object x to be an element of this set: $A \setminus (B \setminus C)$
 
         \begin{align*}
+            x \in A \setminus (B \setminus C)
+            &\Leftrightarrow x \in A \wedge x \notin (B \setminus C)
+            && \text{(by definition of $\setminus$)} \\
+            &\Leftrightarrow x \in A \wedge \neg (x \in B \wedge x \notin C)
+            && \text{(by definition of $\setminus$)} \\
+            &\Leftrightarrow x \in A \wedge (x \notin B \vee x \in C)
+            && \text{(by De Morgan Law)} \\
         \end{align*}
 
     \subsection*{Solution to 9(c)}
         Write out (using logical symbols) what it means for an object x to be an element of this set: $(A \setminus B) \cup (A \cap C)$
 
         \begin{align*}
+            x \in (A \setminus B) \cup (A \cap C)
+            &\Leftrightarrow x \in (A \setminus B) \vee x \in (A \cap C)
+            && \text{(by definition of $\cap$)} \\
+            &\Leftrightarrow (x \in A \wedge x \notin B) \vee x \in (A \cap C)
+            && \text{(by definition of $\setminus$)} \\
+            &\Leftrightarrow (x \in A \wedge x \notin B) \vee (x \in A \wedge x \in C)
+            && \text{(by definition of $\cap$)} \\
         \end{align*}
 
     \subsection*{Solution to 9(d)}
         Write out (using logical symbols) what it means for an object x to be an element of this set: $(A \setminus B) \cap (A \setminus C)$
 
         \begin{align*}
+            x \in (A \setminus B) \cap (A \setminus C)
+            &\Leftrightarrow x \in (A \setminus B) \wedge x \in (A \setminus C)
+            && \text{(by definition of $\cap$)} \\
+            &\Leftrightarrow (x \in A \wedge x \notin B) \wedge x \in (A \setminus C)
+            && \text{(by definition of $\setminus$)} \\
+            &\Leftrightarrow (x \in A \wedge x \notin B) \wedge (x \in A \wedge x \notin C)
+            && \text{(by definition of $\setminus$)} \\
         \end{align*}
 
     \subsection*{Solution to 9(e)}
         Write out (using logical symbols) what it means for an object x to be an element of this set: $A \setminus (B \cup C)$
 
         \begin{align*}
+            x \in A \setminus (B \cup C)
+            &\Leftrightarrow x \in A \wedge x \notin (B \cup C)
+            && \text{(by definition of $\setminus$)} \\
+            &\Leftrightarrow x \in A \wedge \neg (x \in B \vee x \in C)
+            && \text{(by definition of $\cup$)} \\
+            &\Leftrightarrow x \in A \wedge (x \notin B \wedge x \notin C)
+            && \text{(by De Morgan Law)} \\
         \end{align*}
-
 \end{document}
