@@ -75,32 +75,10 @@
         && \text{(by definition of $\cap$)} \\
         &\Leftrightarrow (x \in A \vee x \in B) \wedge (x \in A \vee x \in C)
         && \text{(by the Distributive Law)} \\
-        &\Leftrightarrow (x \in A \vee x \in B) \cap (x \in A \vee x \in C)
-        && \text{(by the Identity Law for $\wedge$) wrong!} \\
-        &\Leftrightarrow x \in (A \cup B) \cap (A \cup C)
-        && \text{(by the Identity Law for $\cup$) wrong!} \\
-    \end{align*}
-    \hfill $\blacksquare$
-
-    \subsection*{correct}
-    \begin{align*}
-        x \in A \cup (B \cap C)
-        &\Leftrightarrow x \in A \vee x \in (B \cap C)
-        && \text{(by definition of $\cup$)} \\
-        &\Leftrightarrow x \in A \vee (x \in B \wedge x \in C)
-        && \text{(by definition of $\cap$)} \\
-        &\Leftrightarrow (x \in A \vee x \in B) \wedge (x \in A \vee x \in C)
-        && \text{(by the Distributive Law)} \\
         &\Leftrightarrow x \in (A \cup B) \wedge x \in (A \cup C)
         && \text{(by definition of $\cup$, applied twice)} \\
         &\Leftrightarrow x \in (A \cup B) \cap (A \cup C)
-        && \text{(by definition of $\cap$)} \\
+        && \text{(by defintion of $\cap$)}
     \end{align*}
     \hfill $\blacksquare$
-
-    \section*{notes for the night}
-    I'm currently working discussing the problem with Gemini. I'll pick it up later. The conversation is in the openWebUI in docker.\\
-    I am researching orders of operations and chewing on the mistakes of my solution.
-
-
 \end{document}
