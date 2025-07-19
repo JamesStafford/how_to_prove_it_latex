@@ -83,9 +83,46 @@
     \hfill $\blacksquare$
 
     \subsection*{Solution to 6(a)}
-    To show $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$, we show that for any object $x$, the statement $(A \cup B) \setminus C$ is equivalent to $(A \setminus C) \cup (B \setminus C)$.
+    To show $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$, we show that for any object $x$, \\
+    the statement $x \in (A \cup B) \setminus C$ is equivalent to $x \in (A \setminus C) \cup (B \setminus C)$.
 
     \begin{align*}
+        x \in (A \cup B) \setminus C
+        &\Leftrightarrow x \in (A \cup B) \wedge x \notin C 
+        && \text{(by definition of $\setminus$)} \\
+        &\Leftrightarrow (x \in A \vee x \in B) \wedge x \notin C
+        && \text{(by definition of $\cup$)} \\
+        &\Leftrightarrow  (x \in A \wedge x \notin C) \vee (x \in B \wedge x \notin C)
+        && \text{(by the Distributive Law)} \\
+        &\Leftrightarrow  x \in (A \setminus C) \vee x \in (B \setminus C)
+        && \text{(by definition of $\setminus$, applied twice)} \\
+        &\Leftrightarrow  x \in (A \setminus C) \cup (B \setminus C)
+        && \text{(by definition of $\cup$)} \\
     \end{align*}
+    \hfill $\blacksquare$
 
+    \subsection*{Solution to 6(b)}
+        To show $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$, we show that for any object $x$, \\
+        the statement $x \in A \cup (B \setminus C)$ is equivalent to $x \in (A \cup B) \setminus (C \setminus A)$.
+
+    \begin{align*}
+        x \in A \cup (B \setminus C)
+        &\Leftrightarrow x \in A \vee x \in (B \setminus C)
+        && \text{(by definition of $\cup$)} \\
+        &\Leftrightarrow x \in A \vee (x \in B \wedge x \notin C)
+        && \text{(by definition of $\setminus$)} \\
+        &\Leftrightarrow (x \in A \vee x \in B) \wedge (x \in A \vee x \notin C)
+        && \text{(by the Distributive Law )} \\
+        &\Leftrightarrow (x \in A \vee x \in B) \wedge \neg (x \notin A \wedge x \in C)
+        && \text{(by the De Morgan Law )} \\
+        &\Leftrightarrow (x \in A \vee x \in B) \wedge \neg (x \in C \wedge x \notin A)
+        && \text{(by the Commutative Law )} \\
+        &\Leftrightarrow x \in (A \cup B) \wedge \neg (x \in C \wedge x \notin A)
+        && \text{(by the definition of $\cup$ )} \\
+        &\Leftrightarrow x \in (A \cup B) \wedge x \notin (C \setminus A)
+        && \text{(by the definition of $\setminus$ )} \\
+        &\Leftrightarrow x \in (A \cup B) \setminus (C \setminus A)
+        && \text{(by the definition of $\setminus$ )} \\
+    \end{align*}
+    \hfill $\blacksquare$
 \end{document}
