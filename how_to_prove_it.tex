@@ -215,7 +215,7 @@
 
         \begin{align*}
             x \in (A \setminus B) \setminus C
-            &\Leftrightarrow (x \in A \wedge x \notin B) \setminus C
+            &\Leftrightarrow x \in (A \setminus B) \wedge x \notin C
             && \text{(by definition of $\setminus$)} \\
             &\Leftrightarrow (x \in A \wedge x \notin B) \wedge x \notin C
             && \text{(by definition of $\setminus$)} \\
@@ -240,7 +240,7 @@
         \begin{align*}
             x \in (A \setminus B) \cup (A \cap C)
             &\Leftrightarrow x \in (A \setminus B) \vee x \in (A \cap C)
-            && \text{(by definition of $\cap$)} \\
+            && \text{(by definition of $\cup$)} \\
             &\Leftrightarrow (x \in A \wedge x \notin B) \vee x \in (A \cap C)
             && \text{(by definition of $\setminus$)} \\
             &\Leftrightarrow (x \in A \wedge x \notin B) \vee (x \in A \wedge x \in C)
@@ -254,10 +254,8 @@
             x \in (A \setminus B) \cap (A \setminus C)
             &\Leftrightarrow x \in (A \setminus B) \wedge x \in (A \setminus C)
             && \text{(by definition of $\cap$)} \\
-            &\Leftrightarrow (x \in A \wedge x \notin B) \wedge x \in (A \setminus C)
-            && \text{(by definition of $\setminus$)} \\
             &\Leftrightarrow (x \in A \wedge x \notin B) \wedge (x \in A \wedge x \notin C)
-            && \text{(by definition of $\setminus$)} \\
+            && \text{(by definition of $\setminus$, applied twice)}
         \end{align*}
 
     \subsection*{Solution to 9(e)}
